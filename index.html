@@ -5,23 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  </head>
-  <body>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+
+
     <main>
-      <section id="todoOpen">
-        <div class="addTodo">
-          <button id="open-dialog">Add</button>
-          <dialog>
-            <h2>Add Todo</h2>
-            <form method="dialog">
-              <input id="todoTitle" type="text" placeholder="What's to do?" />
-              <button id="submit" type="submit">Submit</button>
-              <button id="cancel">Cancel</button>
-            </form>
-          </dialog>
+        <div class="toDoTop">
+            <div class="listItem">
+            <div>
+            <input id="check"  type="checkbox" name="Erledigt">
+            <label for="check">Done</label>
+            </div>
+             <ul>
+                <li>Placeholder</li>
+            </ul>
+                <div>
+            <input id="edit"   type="checkbox">
+            <label for="edit">Edit</label>
+            </div>
+            <div>
+            <input id="delete" type="checkbox">
+            <label for="delete">Delete</label>
+            </div>
+            </div>
+            <div class="listItem">
+                <div>
+                <input id="check"  type="checkbox" name="Erledigt">
+                <label for="check">Done</label>
+                </div>
+                 <ul>
+                    <li>Placeholder</li>
+                </ul>
+                    <div>
+                <input id="edit"   type="checkbox">
+                <label for="edit">Edit</label>
+                </div>
+                <div>
+                <input id="delete" type="checkbox">
+                <label for="delete">Delete</label>
+                </div>
+                </div>
+                <div class="listItem">
+                    <div>
+                    <input id="check"  type="checkbox" name="Erledigt">
+                    <label for="check">Done</label>
+                    </div>
+                     <ul>
+                        <li>Placeholder</li>
+                    </ul>
+                        <div>
+                    <input id="edit"   type="checkbox">
+                    <label for="edit">Edit</label>
+                    </div>
+                    <div>
+                    <input id="delete" type="checkbox">
+                    <label for="delete">Delete</label>
+                    </div>
+                    </div>
+
+
         </div>
-      </section>
+        <section id="todoOpen">
+            <div class="addTodo">
+              <button id="open-dialog">Add</button>
+              <dialog>
+                <h2>Add Todo</h2>
+                <form method="dialog">
+                  <input id="todoTitle" type="text" placeholder="What's to do?" />
+                  <button id="submit" type="submit">Submit</button>
+                  <button id="cancel">Cancel</button>
+                </form>
+              </dialog>
+            </div>
+          </section>
+        </main>
+        <script src="./javascript/script.js"></script>
+
+
+
     </main>
-    <script src="./javascript/script.js"></script>
-  </body>
+    
+
+
+</body>
 </html>
+

@@ -6,45 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-
-
     <main>
+        <h1>ToDos offen</h1>
         <div class="toDoTop">
-            <div class="listItem">
-            <div>
-            <input id="check"  type="checkbox" name="Erledigt">
-            <label for="check">Done</label>
-            </div>
+            <div class="listItemButton">
+                <div>
+                    <button id="check" name="Erledigt" class="button2"></button>
+                </div>
              <ul>
                 <li>Placeholder</li>
             </ul>
-                <div>
-            <input id="edit"   type="checkbox">
-            <label for="edit">Edit</label>
-            </div>
             <div>
-            <input id="delete" type="checkbox">
-            <label for="delete">Delete</label>
+                <button id="edit" class="button3"></button>
+        </div>
+        <div>
+            <button id="delete" class="button1"></button>
+        </div>
             </div>
-            </div>
-            <div class="listItem">
+            <div class="listItemButton">
                 <div>
-                <input id="check"  type="checkbox" name="Erledigt">
-                <label for="check">Done</label>
+                    <button id="check" name="Erledigt" class="button2"></button>
                 </div>
                  <ul>
                     <li>Placeholder</li>
                 </ul>
                     <div>
-                <input id="edit"   type="checkbox">
-                <label for="edit">Edit</label>
+                        <button id="edit" class="button3"></button>
                 </div>
                 <div>
-                <input id="delete" type="checkbox">
-                <label for="delete">Delete</label>
+                    <button id="delete" class="button1"></button>
                 </div>
                 </div>
                 <div class="listItem">
@@ -64,31 +60,50 @@
                     <label for="delete">Delete</label>
                     </div>
                     </div>
+                    
+                    <section id="todoOpen">
+                        <div class="addTodo">
+                          <button id="open-dialog">+</button>
+                          <dialog>
+                            <h2>Add Todo</h2>
+                            <form method="dialog">
+                              <input id="todoTitle" type="text" placeholder="What's to do?" />
+                              <button id="submit" type="submit">Submit</button>
+                              <button id="cancel">Cancel</button>
+                            </form>
+                          </dialog>
+                        </div>
+                      </section>
+         </div>
+            <h1>ToDos fertig</h1>
+        <div class="toDoTop">
+            <div class="listItem">
+              
+                <ul>
+                   <li>Placeholder</li>
+               </ul>
+      
+           </div>
+           <div class="listItem">
+              
+            <ul>
+               <li>Placeholder</li>
+           </ul>
+  
+       </div>
+       <div class="listItem">
+              
+        <ul>
+           <li>Placeholder</li>
+       </ul>
 
+   </div>
 
+                 
         </div>
-        <section id="todoOpen">
-            <div class="addTodo">
-              <button id="open-dialog">Add</button>
-              <dialog>
-                <h2>Add Todo</h2>
-                <form method="dialog">
-                  <input id="todoTitle" type="text" placeholder="What's to do?" />
-                  <button id="submit" type="submit">Submit</button>
-                  <button id="cancel">Cancel</button>
-                </form>
-              </dialog>
-            </div>
-          </section>
-        </main>
-        <script src="./javascript/script.js"></script>
-
-
-
     </main>
     
-
-
+    <script src="./javascript/script.js"></script>
 </body>
 </html>
 

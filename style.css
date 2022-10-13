@@ -5,18 +5,34 @@
 }
 
 header{
-    height: 300px;
+    width: 100%;
     background-color:darksalmon;
+    display: flex;  
+    justify-content: center;
+    padding: 10px ;
+
 }
 
-#logo{
-    weight: 20px;
+.containerHeader{
+    width: 80%;
+    display: flex;
+    border: 2px solid black;
+}
 
+
+#logo{
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
 }
 
 #title{
-
-
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px auto;
 }
 
 
@@ -62,5 +78,39 @@ input{
     margin-top: 10px;
 }
 
+
+footer{
+    width: 100%;
+    background-color:darksalmon;
+    display: flex;  
+    justify-content: center;
+    padding: 10px ;
+}
+.containerFooter{
+    width: 80%;
+    display: block;
+    border: 2px solid black;
+}
+
+#contactField{
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+
+}
+
+#linksFooter{
+    display: flex;
+    justify-content: center;
+}
+
+.footerElement{
+    padding: 10px auto 
+}
+
+#copyright{
+    display: flex;
+    justify-content: center;
+}
 
     

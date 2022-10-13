@@ -1,8 +1,54 @@
+/************* Allgemeines Anfang  *************/
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   background-color: #ffffff;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/************* Allgemeines Ende *************/
+
+header {
+  width: 100%;
+  background-color: darksalmon;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.containerHeader {
+  width: 80%;
+  height: 86px;
+  display: flex;
+  border: 2px solid black;
+}
+
+#logo {
+  height: 100%;
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
 }
 
 .toDoTop {
@@ -18,7 +64,7 @@
   margin-top: 30px;
 }
 
-ul {
+main ul {
   list-style: none;
   width: 550px;
   height: 40px;
@@ -28,7 +74,7 @@ ul {
   border-radius: 10px;
   background-color: #05386b;
 }
-ul li {
+main ul li {
   margin-top: 5px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -48,41 +94,32 @@ input {
   margin-top: 10px;
 }
 
-
-
-#open-dialog{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    font-size: 40px;
-    text-align: center;
-    color: #FEFFFF;
-    border: 4px solid #ffffff;
-    background-color: #05386b;
-   
-
-}
-    
-.ueber{
-    display: flex;
-    align-items: center;
-    margin: auto;
-    width: 320px;
-    
-    height: 100px;
-
+#open-dialog {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  font-size: 40px;
+  text-align: center;
+  color: #feffff;
+  border: 4px solid #ffffff;
+  background-color: #05386b;
 }
 
-h1{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    color: #05386b;
-    margin: 10px;
+.ueber {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 320px;
 
-    
+  height: 100px;
+}
 
-
+h1 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #05386b;
+  margin: 10px;
 }
 
 h1 {
@@ -109,6 +146,7 @@ h1 {
     background-color: #05386b;
 }
 
+
 .button1 {
     width: 30px;
     height: 30px;
@@ -127,7 +165,6 @@ h1 {
     cursor: pointer;
     margin: 0px 10px
 }
-
 
 .button3 {
   width: 30px;
@@ -173,167 +210,145 @@ h1 {
   }
 }
 
+footer {
+  width: 100%;
+  background-color: darksalmon;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.containerFooter {
+  width: 80%;
+  display: block;
+  border: 2px solid black;
+}
 
+#contactField {
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+}
 
+#linksFooter {
+  display: flex;
+  justify-content: center;
+}
 
+.footerElement {
+  padding: 10px auto;
+}
+
+#copyright {
+  display: flex;
+  justify-content: center;
+}
 
 @media screen and (max-width: 780px) {
-    .toDoTop{
-        width: 600px;
-        height: 400px;
-
-        
-       
-        
-    }
-    
-    ul{
-       
-        width: 275px;
-        height: 20px;
-       
-        
-        
-    }
-    
-    .listItem {
-      width: 335px;
-      height: 20px;
-
-    }
-    
-
-    
-    
-    #open-dialog{
-        height: 25px;
-        width: 25px;
-        border-radius: 50%;
-
-    
-    }
-        
-    .addTodo{
-        position: relative;
-        top:290px;
-        left:350px;
-    }
-    
-
-    .button1{
-        width: 15px;
-        height: 15px;
-        background-size: 15px ;
-        margin: 5px 10px
-    }
-    
-    .button2{
-        width: 15px;
-        height: 15px;
-        background-size: 15px ;
-        margin: 5px 10px
-    }
-    
-    .button3{
-        width: 15px;
-        height: 15px;
-        background-size: 15px ;
-        margin: 5px 10px
-    }
-    
-    .listItemButton{
-        width: 345px;
-        height: 20px;
-    }
-
-
-
-
-
+  .toDoTop {
+    width: 600px;
+    height: 400px;
   }
 
+  main ul {
+    width: 275px;
+    height: 20px;
+  }
 
+  .listItem {
+    width: 335px;
+    height: 20px;
+  }
 
+  #open-dialog {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+  }
 
+  .addTodo {
+    position: relative;
+    top: 290px;
+    left: 350px;
+  }
 
+  .button1 {
+    width: 15px;
+    height: 15px;
+    background-size: 15px;
+    margin: 5px 10px;
+  }
 
+  .button2 {
+    width: 15px;
+    height: 15px;
+    background-size: 15px;
+    margin: 5px 10px;
+  }
 
+  .button3 {
+    width: 15px;
+    height: 15px;
+    background-size: 15px;
+    margin: 5px 10px;
+  }
 
-
-
-
-
+  .listItemButton {
+    width: 345px;
+    height: 20px;
+  }
+}
 
 @media screen and (max-width: 480px) {
-    .toDoTop{
-        width: 350px;
-        height: 250px;
+  .toDoTop {
+    width: 350px;
+    height: 250px;
+  }
 
-        
-       
-        
-    }
-    
-    ul{
-       
-        width: 275px;
-        height: 20px;
-       
-        
-        
-    }
-    
-    .listItem {
-      width: 335px;
-      height: 20px;
+  main ul {
+    width: 275px;
+    height: 20px;
+  }
 
-    }
-    
+  .listItem {
+    width: 335px;
+    height: 20px;
+  }
 
-    
-    
-    #open-dialog{
-        height: 25px;
-        width: 25px;
-        border-radius: 50%;
+  #open-dialog {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+  }
 
-    
-    }
-        
-    .addTodo{
-        position: relative;
-        top:290px;
-        left:350px;
-    }
-    
+  .addTodo {
+    position: relative;
+    top: 290px;
+    left: 350px;
+  }
 
-    .button1{
-        width: 15px;
-        height: 15px;
-        background-size: 15px ;
-        margin: 5px 10px
-    }
-    
-    .button2{
-        width: 15px;
-        height: 15px;
-        background-size: 15px ;
-        margin: 5px 10px
-    }
-    
-    .button3{
-        width: 15px;
-        height: 15px;
-        background-size: 15px ;
-        margin: 5px 10px
-    }
-    
-    .listItemButton{
-        width: 345px;
-        height: 20px;
-    }
+  .button1 {
+    width: 15px;
+    height: 15px;
+    background-size: 15px;
+    margin: 5px 10px;
+  }
 
+  .button2 {
+    width: 15px;
+    height: 15px;
+    background-size: 15px;
+    margin: 5px 10px;
+  }
 
+  .button3 {
+    width: 15px;
+    height: 15px;
+    background-size: 15px;
+    margin: 5px 10px;
+  }
 
-
+  .listItemButton {
+    width: 345px;
+    height: 20px;
+  }
 }

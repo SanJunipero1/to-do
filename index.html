@@ -5,48 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="style.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="containerHeader">
+        <img
+          id="logo"
+          src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+          alt="Logo"
+        />
+        <h1 id="title">To-Do-Lister</h1>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="" #>About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
     <main>
-       <div class="ueber">
+      <div class="ueber">
         <h1>ToDos offen</h1>
         <section id="todoOpen">
-            <div class="addTodo">
-              <button id="open-dialog">+</button>
-              <dialog>
-                <h2>Add Todo</h2>
-                <form method="dialog">
-                  <input id="todoTitle" type="text" placeholder="What's to do?" />
-                  <button id="submit" type="submit">Submit</button>
-                  <button id="cancel">Cancel</button>
-                </form>
-              </dialog>
-            </div>
-          </section>
-    </div> 
-        
-        
-        
-        <div  id="topDiv" class="toDoTop">
-         
-                  
-         </div>
-        
-            <h1>ToDos fertig</h1>
-        <div id=bottomDiv class="toDoTop">
-            
-                 
-        </div>
+          <div class="addTodo">
+            <button id="open-dialog">+</button>
+            <dialog>
+              <h2>Add Todo</h2>
+              <form method="dialog">
+                <input id="todoTitle" type="text" placeholder="What's to do?" />
+                <button id="submit" type="submit">Submit</button>
+                <button id="cancel">Cancel</button>
+              </form>
+            </dialog>
+          </div>
+        </section>
+      </div>
 
-        <div class="test"></div>
+      <div id="topDiv" class="toDoTop"></div>
+
+      <h1>ToDos fertig</h1>
+      <div id="bottomDiv" class="toDoTop"></div>
+
+      <div class="test"></div>
     </main>
+<<<<<<< HEAD
 
     <script src="./javascript/script.js"></script>
 </body>
+=======
+    <footer>
+      <div class="containerFooter">
+        <div id="contactField">
+          <p>Kontakt</p>
+        </div>
+        <div id="linksFooter">
+          <span class="footerElement">Impressum</span>
+          <span class="footerElement">Datenschutz</span>
+        </div>
+        <div id="copyright">
+          <p>&copy; MyToDo 2022</p>
+        </div>
+      </div>
+    </footer>
+>>>>>>> 880e7757f1f26be48b51327eedf37f0b3cd9158d
 
+    <script src="./javascript/script.js"></script>
+  </body>
 </html>

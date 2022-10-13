@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -14,65 +17,13 @@
             <span id="title">Meine To-Do-Liste</span>
         </div>
     </header>
+
     <main>
-        <div class="toDoTop">
-            <div class="listItem">
-            <div>
-            <input id="check"  type="checkbox" name="Erledigt">
-            <label for="check">Done</label>
-            </div>
-             <ul>
-                <li>Placeholder</li>
-            </ul>
-                <div>
-            <input id="edit"   type="checkbox">
-            <label for="edit">Edit</label>
-            </div>
-            <div>
-            <input id="delete" type="checkbox">
-            <label for="delete">Delete</label>
-            </div>
-            </div>
-            <div class="listItem">
-                <div>
-                <input id="check"  type="checkbox" name="Erledigt">
-                <label for="check">Done</label>
-                </div>
-                 <ul>
-                    <li>Placeholder</li>
-                </ul>
-                    <div>
-                <input id="edit"   type="checkbox">
-                <label for="edit">Edit</label>
-                </div>
-                <div>
-                <input id="delete" type="checkbox">
-                <label for="delete">Delete</label>
-                </div>
-                </div>
-                <div class="listItem">
-                    <div>
-                    <input id="check"  type="checkbox" name="Erledigt">
-                    <label for="check">Done</label>
-                    </div>
-                     <ul>
-                        <li>Placeholder</li>
-                    </ul>
-                        <div>
-                    <input id="edit"   type="checkbox">
-                    <label for="edit">Edit</label>
-                    </div>
-                    <div>
-                    <input id="delete" type="checkbox">
-                    <label for="delete">Delete</label>
-                    </div>
-                    </div>
-
-
-        </div>
+       <div class="ueber">
+        <h1>ToDos offen</h1>
         <section id="todoOpen">
             <div class="addTodo">
-              <button id="open-dialog">Add</button>
+              <button id="open-dialog">+</button>
               <dialog>
                 <h2>Add Todo</h2>
                 <form method="dialog">
@@ -83,15 +34,28 @@
               </dialog>
             </div>
           </section>
-        </main>
-        <script src="./javascript/script.js"></script>
+    </div> 
+        
+        
+        
+        <div  id="topDiv" class="toDoTop">
+         
+                  
+         </div>
+        
+            <h1>ToDos fertig</h1>
+        <div id=bottomDiv class="toDoTop">
+            
+                 
+        </div>
 
-
-
+        <div class="test"></div>
     </main>
     <footer>
         
     </footer>
+    
+    <script src="./javascript/script.js"></script>
 </body>
-</html>
 
+</html>

@@ -13,94 +13,37 @@
 <body>
 
     <main>
+       <div class="ueber">
         <h1>ToDos offen</h1>
-        <div class="toDoTop">
-            <div class="listItemButton">
-                <div>
-                    <button id="check" name="Erledigt" class="button2"></button>
-                </div>
-             <ul>
-                <li>Placeholder</li>
-            </ul>
-            <div>
-                <button id="edit" class="button3"></button>
-        </div>
-        <div>
-            <button id="delete" class="button1"></button>
-        </div>
+        <section id="todoOpen">
+            <div class="addTodo">
+              <button id="open-dialog">+</button>
+              <dialog>
+                <h2>Add Todo</h2>
+                <form method="dialog">
+                  <input id="todoTitle" type="text" placeholder="What's to do?" />
+                  <button id="submit" type="submit">Submit</button>
+                  <button id="cancel">Cancel</button>
+                </form>
+              </dialog>
             </div>
-            <div class="listItemButton">
-                <div>
-                    <button id="check" name="Erledigt" class="button2"></button>
-                </div>
-                 <ul>
-                    <li>Placeholder</li>
-                </ul>
-                    <div>
-                        <button id="edit" class="button3"></button>
-                </div>
-                <div>
-                    <button id="delete" class="button1"></button>
-                </div>
-                </div>
-                <div class="listItem">
-                    <div>
-                    <input id="check"  type="checkbox" name="Erledigt">
-                    <label for="check">Done</label>
-                    </div>
-                     <ul>
-                        <li>Placeholder</li>
-                    </ul>
-                        <div>
-                    <input id="edit"   type="checkbox">
-                    <label for="edit">Edit</label>
-                    </div>
-                    <div>
-                    <input id="delete" type="checkbox">
-                    <label for="delete">Delete</label>
-                    </div>
-                    </div>
-                    
-                    <section id="todoOpen">
-                        <div class="addTodo">
-                          <button id="open-dialog">+</button>
-                          <dialog>
-                            <h2>Add Todo</h2>
-                            <form method="dialog">
-                              <input id="todoTitle" type="text" placeholder="What's to do?" />
-                              <button id="submit" type="submit">Submit</button>
-                              <button id="cancel">Cancel</button>
-                            </form>
-                          </dialog>
-                        </div>
-                      </section>
+          </section>
+    </div> 
+        
+        
+        
+        <div  id="topDiv" class="toDoTop">
+         
+                  
          </div>
+        
             <h1>ToDos fertig</h1>
-        <div class="toDoTop">
-            <div class="listItem">
-              
-                <ul>
-                   <li>Placeholder</li>
-               </ul>
-      
-           </div>
-           <div class="listItem">
-              
-            <ul>
-               <li>Placeholder</li>
-           </ul>
-  
-       </div>
-       <div class="listItem">
-              
-        <ul>
-           <li>Placeholder</li>
-       </ul>
-
-   </div>
-
+        <div id=bottomDiv class="toDoTop">
+            
                  
         </div>
+
+        <div class="test"></div>
     </main>
     
     <script src="./javascript/script.js"></script>

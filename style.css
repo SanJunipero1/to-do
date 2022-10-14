@@ -103,6 +103,7 @@ input {
   color: #feffff;
   border: 4px solid #ffffff;
   background-color: #05386b;
+  cursor: pointer;
 }
 
 .ueber {

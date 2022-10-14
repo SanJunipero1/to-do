@@ -3,10 +3,8 @@ const deleteItemX = document.getElementById("delete");
 const editItemx = document.getElementById("edit");
 const topDiv = document.getElementById("topDiv")
 const bottomDiv = document.getElementById("bottomDiv")
-
-
- const addButton = document.querySelector("#open-dialog");
- const modal = document.querySelector(".addTodo dialog");
+const addButton = document.querySelector("#open-dialog");
+const modal = document.querySelector(".addTodo dialog");
  
  function toggleModal() {
    modal.show();
@@ -14,26 +12,57 @@ const bottomDiv = document.getElementById("bottomDiv")
  addButton.addEventListener("click", toggleModal);
  
 
+
+
+
+ 
+ 
+
+ 
+ 
  function setAttributes(element, attributes) {
    Object.keys(attributes).forEach((attr) => {
      element.setAttribute(attr, attributes[attr]);
    });
  }
 
+
  
 const inputField = document.getElementById("todoTitle");
+const inputSubmit = document.getElementById("inputform");
 const listContainer = document.getElementById("listContainer")
 
-let inputList = [];
+let inputList = JSON.parse(localStorage.getItem("toDo"))
+
+if(!inputList){
+  inputList = []
+  const info = document.createElement("h2");
+  info.classList.add("h2style")
+  info.innerText = "Momentan nichts zu tun"
+  topDiv.appendChild(info)
+}else{
+  createList(inputList)
+}
+
+
+console.log(inputList)
+
+
+
+
 
 function handleInput(event){
+  event.preventDefault()
   const newInput = event.target.value
   inputList.push({newInput})
+  const jsontoDoList = JSON.stringify(inputList)
+  localStorage.setItem("toDo",jsontoDoList)
   inputField.value = "";
   createList(inputList);
   console.log(inputList)
 }
-inputField.addEventListener("change", handleInput);
+
+inputSubmit.addEventListener("click", handleInput);
 
   
 
@@ -64,19 +93,20 @@ function createList(liste){
            
           //handle check
           checkButton.addEventListener("click",()=>{
-            bottomDiv .appendChild(h2div);
+            bottomDiv.appendChild(h2div);
             div.innerHTML =""
           })
           
           //handle edit
           editButton.addEventListener("click",()=>{
-            let neuerText = prompt("");
+            let neuerText = prompt("Änderungen");
             h2.innerText = neuerText
           })
 
           //handle delete
           deleteButton.addEventListener("click", ()=>{
             deleteItem(index);
+            
           } )
 
           
@@ -91,5 +121,7 @@ function createList(liste){
 function deleteItem(index){
   inputList.splice(index, 1);
   createList(inputList)
+  localStorage.removeItem("toDo","newInput")
+ 
 
 }

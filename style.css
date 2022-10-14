@@ -32,6 +32,7 @@ p {
 header {
   width: 100%;
   background-color: var(--color-secondary);
+  font-family: var(--font-family);
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -50,7 +51,7 @@ header {
 #title {
   display: flex;
   color: black; 
-  font-size: 50px;
+  font-size: 40px;
   justify-content: center;
   align-content: center;
   padding: 10px;
@@ -171,6 +172,7 @@ h1 {
 footer {
   width: 100%;
   background-color: var(--color-secondary);
+  font-family: var(--font-family);
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -209,6 +211,27 @@ footer {
 /************* Media Queries Anfang *************/
 
 @media screen and (max-width: 780px) {
+     
+  .containerHeader {
+    width: 90%;
+    height: 90px;
+    align-items: center;
+  }
+  
+   #logo {
+    height: 70%; 
+  }
+  
+  #title {
+    font-size: 30px;
+  }
+  
+  nav > ul {
+    flex-direction: column;
+    font-size: 15px; 
+    gap: 5px;
+  }
+
   .toDoTop {
     width: 600px;
     height: 400px;
@@ -253,6 +276,21 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+     
+  .containerHeader {
+    align-items: center;
+    height: 90px;
+  }
+
+  #logo {
+    height: 60%; 
+  }
+  
+  #title {
+    font-size: 20px;
+  }
+  
+   
   .toDoTop {
     width: 350px;
     height: 250px;

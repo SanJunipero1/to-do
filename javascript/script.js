@@ -1,5 +1,7 @@
 const topDiv = document.getElementById("topDiv");
 const bottomDiv = document.getElementById("bottomDiv");
+const inputField = document.getElementById("todoTitle");
+const listContainer = document.getElementById("listContainer");
 
 function setAttributes(element, attributes) {
   Object.keys(attributes).forEach((attr) => {
@@ -20,11 +22,8 @@ function toggleModal() {
 addButton.addEventListener("click", toggleModal);
 
 /**
- * Handle ToDo's
+ * check if localStorage !empty and create Items if true
  */
-const inputField = document.getElementById("todoTitle");
-const listContainer = document.getElementById("listContainer");
-
 let inputList = JSON.parse(localStorage.getItem("toDo"));
 
 if (!inputList) {
@@ -37,17 +36,30 @@ if (!inputList) {
   createList(inputList);
 }
 
-console.log(inputList);
-
+/**
+ * Handle new Input of the Input field
+ */
+let newInput;
 function handleInput(event) {
   event.preventDefault();
-  const newInput = event.target.value;
+  newInput = event.target.value;
+}
+
+const submitButton = document.querySelector("#submit");
+const cancelButton = document.querySelector("#cancel");
+
+function submitToDo(inputList) {
+  inputField.value = "";
   inputList.push({ newInput });
   pushInput(inputList);
-  inputField.value = "";
   createList(inputList);
-  console.log(inputList);
 }
+submitButton.addEventListener("click", () => {
+  submitToDo(inputList);
+});
+cancelButton.addEventListener("click", () => {
+  inputField.value = "";
+});
 
 function pushInput(inputList) {
   const jsontoDoList = JSON.stringify(inputList);
@@ -56,6 +68,9 @@ function pushInput(inputList) {
 
 inputField.addEventListener("change", handleInput);
 
+/**
+ * Create List of ToDos
+ */
 function createList(liste) {
   topDiv.innerHTML = "";
   liste.forEach((item, index) => {
@@ -98,10 +113,9 @@ function createList(liste) {
     });
   });
 }
-
+//handle delete + recreate ToDos and LocalStorage
 function deleteItem(index) {
   inputList.splice(index, 1);
-
   localStorage.removeItem("toDo", "newInput");
   createList(inputList);
   pushInput(inputList);

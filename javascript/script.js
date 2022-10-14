@@ -26,10 +26,18 @@ addButton.addEventListener("click", toggleModal);
  */
 let inputList = JSON.parse(localStorage.getItem("toDo"));
 //check storage
-let checkList = []
+let checkList = JSON.parse(localStorage.getItem("done"));
+
+console.log(checkList)
 
 
-
+function checkDone(){
+const checkValue = localStorage.getItem("done")
+const h2check =  document.createElement("h2");
+h2check.classList.add("h2style")
+h2check = JSON.parse(checkValue)
+bottomDiv.appendChild(h2check);
+}
 
 
 
@@ -112,7 +120,7 @@ function createList(liste) {
       localStorage.setItem("done", jsoncheckList);
       bottomDiv.appendChild(h2div);
       div.innerHTML = "";
-
+      localStorage.removeItem("toDo", "newInput");
     });
 
     //handle edit

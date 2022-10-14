@@ -2,7 +2,7 @@
 
 :root {
   --color-primary: #05386b;
-  --color-secondary: darksalmon;
+  --color-secondary: rgb(62, 142, 189);
   --color-dark: #121212;
   --color-light: #f1f1f1;
   --font-family: "Roboto", sans-serif;
@@ -39,28 +39,31 @@ header {
 
 .containerHeader {
   width: 80%;
-  height: 86px;
+  height: 90px;
   display: flex;
-  border: 2px solid var(--color-dark);
-}
+ }
 
 #logo {
-  height: 100%;
+  height: 100%; 
 }
 
 #title {
   display: flex;
+  color: black; 
+  font-size: 50px;
   justify-content: center;
   align-content: center;
-  border: 2px solid var(--color-dark);
   padding: 10px;
   margin: 10px auto;
 }
 
 nav > ul {
   display: flex;
+  font-size: 20px; 
+  text-transform: uppercase;
   justify-content: flex-end;
-  gap: 30px;
+  gap: 35px;
+
 }
 
 /************* Header Ende *************/
@@ -175,26 +178,29 @@ footer {
 .containerFooter {
   width: 80%;
   display: block;
-  border: 2px solid var(--color-dark);
 }
 
 #contactField {
   display: flex;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 10px;
   justify-content: center;
-  border: 2px solid var(--color-dark);
-}
+ }
 
 #linksFooter {
   display: flex;
+  margin: 10px;
+  gap: 20px;
   justify-content: center;
-}
-
-.footerElement {
-  padding: 10px auto;
 }
 
 #copyright {
   display: flex;
+  color: rgb(70, 68, 68);
+  font-size: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   justify-content: center;
 }
 

@@ -4,8 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: #ffffff;
-}
+  }
 
 ul {
   list-style: none;
@@ -17,9 +16,11 @@ a {
 
 /************* Allgemeines Ende *************/
 
+
+/************* Header Anfang *************/
 header {
   width: 100%;
-  background-color: darksalmon;
+  background-color: #6b8a9e;
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -27,29 +28,34 @@ header {
 
 .containerHeader {
   width: 80%;
-  height: 86px;
+  height: 90px;
   display: flex;
-  border: 2px solid black;
-}
+ }
 
 #logo {
-  height: 100%;
+  height: 100%; 
 }
 
 #title {
   display: flex;
+  color: black; 
+  font-size: 50px;
   justify-content: center;
   align-content: center;
-  border: 2px solid black;
   padding: 10px;
   margin: 10px auto;
 }
 
 nav > ul {
   display: flex;
+  font-size: 20px; 
+  text-transform: uppercase;
   justify-content: flex-end;
-  gap: 30px;
+  gap: 35px;
+
 }
+
+/************* Header Ende *************/
 
 .toDoTop {
   width: 700px;
@@ -194,7 +200,7 @@ h1 {
 
 footer {
   width: 100%;
-  background-color: darksalmon;
+  background-color: #6b8a9e;;
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -202,26 +208,34 @@ footer {
 .containerFooter {
   width: 80%;
   display: block;
-  border: 2px solid black;
 }
 
 #contactField {
   display: flex;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 10px;
   justify-content: center;
-  border: 2px solid black;
-}
+ }
 
 #linksFooter {
   display: flex;
+  margin: 10px;
+  gap: 20px;
   justify-content: center;
 }
 
 .footerElement {
-  padding: 10px auto;
+  
+  
 }
 
 #copyright {
   display: flex;
+  color: rgb(70, 68, 68);
+  font-size: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   justify-content: center;
 }
 

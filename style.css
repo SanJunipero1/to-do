@@ -67,6 +67,31 @@ nav > ul {
 
 /************* Main Anfang *************/
 
+/************* Modal Anfang *************/
+
+.modal-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+}
+.modal-container dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  pointer-events: all;
+  width: clamp(300px, 35%, 666px);
+  height: clamp(200px, 50%, 300px);
+  border: 5px solid var(--color-primary);
+  border-radius: 10px;
+}
+.modal-container dialog::backdrop {
+  color: var(--color-dark);
+}
+
+/************* Modal Ende *************/
+
 .toDoTop {
   width: 700px;
   height: 500px;

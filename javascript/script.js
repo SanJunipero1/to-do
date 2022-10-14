@@ -48,7 +48,7 @@ let inputList = JSON.parse(localStorage.getItem("toDo"))
 
 if(!inputList){
   inputList = []
-  const info = document.createElement("h2");
+  const info = document.createElement("toDo");
   info.classList.add("h2style")
   info.innerText = "Momentan nichts zu tun"
   topDiv.appendChild(info)
@@ -133,5 +133,6 @@ function createList(liste) {
 function deleteItem(index) {
   inputList.splice(index, 1);
   createList(inputList)
-  localStorage.removeItem("toDo","newInput")
+  localStorage.removeItem("toDo")
+ 
 }

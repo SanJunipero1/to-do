@@ -1,31 +1,13 @@
+const topDiv = document.getElementById("topDiv");
+const bottomDiv = document.getElementById("bottomDiv");
 
-const topDiv = document.getElementById("topDiv")
-const bottomDiv = document.getElementById("bottomDiv")
-
- 
-
- 
-
-
-
-
- 
- 
-
- 
- 
- function setAttributes(element, attributes) {
-   Object.keys(attributes).forEach((attr) => {
-     element.setAttribute(attr, attributes[attr]);
-   });
- }
-
-
- 
+function setAttributes(element, attributes) {
+  Object.keys(attributes).forEach((attr) => {
+    element.setAttribute(attr, attributes[attr]);
+  });
+}
 
 const inputSubmit = document.getElementById("inputform");
-
-
 
 /**
  * Toggle Modal
@@ -43,35 +25,33 @@ addButton.addEventListener("click", toggleModal);
 const inputField = document.getElementById("todoTitle");
 const listContainer = document.getElementById("listContainer");
 
+let inputList = JSON.parse(localStorage.getItem("toDo"));
 
-let inputList = JSON.parse(localStorage.getItem("toDo"))
-
-if(!inputList){
-  inputList = []
+if (!inputList) {
+  inputList = [];
   const info = document.createElement("h2");
-  info.classList.add("h2style")
-  info.innerText = "Momentan nichts zu tun"
-  topDiv.appendChild(info)
-}else{
-  createList(inputList)
+  info.classList.add("h2style");
+  info.innerText = "Momentan nichts zu tun";
+  topDiv.appendChild(info);
+} else {
+  createList(inputList);
 }
 
+console.log(inputList);
 
-console.log(inputList)
-
-
-
-
-
-function handleInput(event){
-  event.preventDefault()
-  const newInput = event.target.value
-  inputList.push({newInput})
-  const jsontoDoList = JSON.stringify(inputList)
-  localStorage.setItem("toDo",jsontoDoList)
+function handleInput(event) {
+  event.preventDefault();
+  const newInput = event.target.value;
+  inputList.push({ newInput });
+  pushInput(inputList);
   inputField.value = "";
   createList(inputList);
   console.log(inputList);
+}
+
+function pushInput(inputList) {
+  const jsontoDoList = JSON.stringify(inputList);
+  localStorage.setItem("toDo", jsontoDoList);
 }
 
 inputField.addEventListener("change", handleInput);
@@ -100,38 +80,29 @@ function createList(liste) {
     div.appendChild(editButton);
     div.appendChild(deleteButton);
 
+    //handle check
+    checkButton.addEventListener("click", () => {
+      bottomDiv.appendChild(h2div);
+      div.innerHTML = "";
+    });
 
+    //handle edit
+    editButton.addEventListener("click", () => {
+      let neuerText = prompt("Änderungen");
+      h2.innerText = neuerText;
+    });
 
-           
-          //handle check
-          checkButton.addEventListener("click",()=>{
-            bottomDiv.appendChild(h2div);
-            div.innerHTML =""
-          })
-          
-          //handle edit
-          editButton.addEventListener("click",()=>{
-            let neuerText = prompt("Änderungen");
-            h2.innerText = neuerText
-          })
-
-          //handle delete
-          deleteButton.addEventListener("click", ()=>{
-            deleteItem(index);
-            
-          } )
-
-          
-      })
-      
-
-
- 
-  };
-
+    //handle delete
+    deleteButton.addEventListener("click", () => {
+      deleteItem(index);
+    });
+  });
+}
 
 function deleteItem(index) {
   inputList.splice(index, 1);
-  createList(inputList)
-  localStorage.removeItem("toDo","newInput")
+
+  localStorage.removeItem("toDo", "newInput");
+  createList(inputList);
+  pushInput(inputList);
 }

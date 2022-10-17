@@ -166,7 +166,7 @@ dialog button:hover {
   width: 320px;
   height: 100px;
   margin-left: 100px;
-  margin:auto
+  margin: auto;
 }
 
 h1 {
@@ -278,13 +278,6 @@ footer {
 /************* Media Queries Anfang *************/
 
 @media screen and (max-width: 780px) {
-<<<<<<< HEAD
-=======
-    
-  
-
- 
->>>>>>> main
   .containerHeader {
     width: 90%;
     height: 90px;
@@ -311,7 +304,7 @@ footer {
     width: 320px;
     height: 100px;
     margin-left: 100px;
-    margin:auto
+    margin: auto;
   }
 
   .toDoTop {
@@ -322,18 +315,14 @@ footer {
   .h2div {
     width: 374px;
     height: 27px;
-
   }
 
   #open-dialog {
-      height: 34px;
-      width: 34px;
-      border-radius: 50%;
-      font-size: 27px;
-      border: 3px solid var(--color-light);
-
-    
-    
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    font-size: 27px;
+    border: 3px solid var(--color-light);
   }
 
   .h2style {
@@ -345,8 +334,6 @@ footer {
     font-size: 18px;
   }
 
-  
-
   .button1 {
     width: 20px;
     height: 20px;
@@ -355,7 +342,6 @@ footer {
   .button2 {
     width: 27px;
     height: 27px;
-   
   }
 
   .button3 {

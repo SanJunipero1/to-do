@@ -309,7 +309,7 @@ footer {
 
   .toDoTop {
     width: 480px;
-    height: 340px;
+    min-height: 54px;
   }
 
   .h2div {
@@ -369,9 +369,60 @@ footer {
     font-size: 20px;
   }
 
+  .ueber {
+    display: flex;
+    align-items: center;
+    width: 320px;
+    height: 100px;
+    margin-left: 100px;
+    margin: auto;
+  }
+
   .toDoTop {
-    width: 350px;
-    height: 250px;
+    width: 320px;
+    min-height: 36px;
+  }
+
+  .h2div {
+    width: 246px;
+    height: 18px;
+  }
+
+  #open-dialog {
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    font-size: 18px;
+    border: 2px solid var(--color-light);
+  }
+
+  .h2style {
+    margin-top: 0px;
+    font-family: var(--font-family);
+    font-weight: 100;
+    color: var(--color-light);
+    background-color: var(--color-primary);
+    font-size: 12px;
+  }
+
+  .button1 {
+    width: 13px;
+    height: 13px;
+  }
+
+  .button2 {
+    width: 18px;
+    height: 18px;
+  }
+
+  .button3 {
+    width: 13px;
+    height: 13px;
+  }
+
+  .listItemButton {
+    width: 310px;
+    height: 18px;
   }
 }
 

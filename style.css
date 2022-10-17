@@ -24,6 +24,20 @@ a {
 p {
   color: var(--color-dark);
 }
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body > .main-content {
+  flex-grow: 1;
+}
+footer {
+  flex-shrink: 0;
+}
 
 /************* Allgemeines Ende *************/
 
@@ -42,15 +56,15 @@ header {
   width: 80%;
   height: 90px;
   display: flex;
- }
+}
 
 #logo {
-  height: 100%; 
+  height: 100%;
 }
 
 #title {
   display: flex;
-  color: black; 
+  color: black;
   font-size: 40px;
   justify-content: center;
   align-content: center;
@@ -60,11 +74,10 @@ header {
 
 nav > ul {
   display: flex;
-  font-size: 20px; 
+  font-size: 20px;
   text-transform: uppercase;
   justify-content: flex-end;
   gap: 35px;
-
 }
 
 /************* Header Ende *************/
@@ -138,7 +151,7 @@ dialog button:hover {
 
 .toDoTop {
   width: 700px;
-  height: 500px;
+  min-height: 80px;
   border: 5px solid var(--color-primary);
   display: flex;
   flex-direction: column;
@@ -160,7 +173,6 @@ dialog button:hover {
   color: var(--color-light);
   border: 4px solid var(--color-light);
   background-color: var(--color-primary);
-
 }
 .ueber {
   display: flex;
@@ -168,7 +180,7 @@ dialog button:hover {
   width: 320px;
   height: 100px;
   margin-left: 100px;
-  margin:auto
+  margin: auto;
 }
 
 h1 {
@@ -189,6 +201,10 @@ h1 {
   border-radius: 10px;
   background-color: var(--color-primary);
 }
+p.h2style {
+  padding: 5px 10px;
+  border-radius: 10px;
+}
 .h2style {
   margin-top: 5px;
   font-family: var(--font-family);
@@ -199,10 +215,10 @@ h1 {
 
 .listItemButton {
   width: 690px;
-  height: 40px;
   display: flex;
   margin: 10px;
   justify-content: center;
+  align-items: center;
 }
 .listItemButton button {
   background-size: contain;
@@ -253,7 +269,7 @@ footer {
   font-weight: bold;
   margin: 10px;
   justify-content: center;
- }
+}
 
 #linksFooter {
   display: flex;
@@ -276,27 +292,23 @@ footer {
 /************* Media Queries Anfang *************/
 
 @media screen and (max-width: 780px) {
-    
-  
-
- 
   .containerHeader {
     width: 90%;
     height: 90px;
     align-items: center;
   }
-  
-   #logo {
-    height: 70%; 
+
+  #logo {
+    height: 70%;
   }
-  
+
   #title {
     font-size: 30px;
   }
-  
+
   nav > ul {
     flex-direction: column;
-    font-size: 15px; 
+    font-size: 15px;
     gap: 5px;
   }
 
@@ -306,29 +318,25 @@ footer {
     width: 320px;
     height: 100px;
     margin-left: 100px;
-    margin:auto
+    margin: auto;
   }
 
   .toDoTop {
     width: 480px;
-    height: 340px;
+    min-height: 54px;
   }
 
   .h2div {
     width: 374px;
     height: 27px;
-
   }
 
   #open-dialog {
-      height: 34px;
-      width: 34px;
-      border-radius: 50%;
-      font-size: 27px;
-      border: 3px solid var(--color-light);
-
-    
-    
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    font-size: 27px;
+    border: 3px solid var(--color-light);
   }
 
   .h2style {
@@ -348,7 +356,6 @@ footer {
   .button2 {
     width: 27px;
     height: 27px;
-   
   }
 
   .button3 {
@@ -363,6 +370,74 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-     
+  .containerHeader {
+    align-items: center;
+    height: 90px;
+  }
+
+  #logo {
+    height: 60%;
+  }
+
+  #title {
+    font-size: 20px;
+  }
+
+  .ueber {
+    display: flex;
+    align-items: center;
+    width: 320px;
+    height: 100px;
+    margin-left: 100px;
+    margin: auto;
+  }
+
+  .toDoTop {
+    width: 320px;
+    min-height: 36px;
+  }
+
+  .h2div {
+    width: 246px;
+    height: 18px;
+  }
+
+  #open-dialog {
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    font-size: 18px;
+    border: 2px solid var(--color-light);
+  }
+
+  .h2style {
+    margin-top: 0px;
+    font-family: var(--font-family);
+    font-weight: 100;
+    color: var(--color-light);
+    background-color: var(--color-primary);
+    font-size: 12px;
+  }
+
+  .button1 {
+    width: 13px;
+    height: 13px;
+  }
+
+  .button2 {
+    width: 18px;
+    height: 18px;
+  }
+
+  .button3 {
+    width: 13px;
+    height: 13px;
+  }
+
+  .listItemButton {
+    width: 310px;
+    height: 18px;
+  }
+}
 
 /************* Media Queries Ende *************/

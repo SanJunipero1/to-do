@@ -30,7 +30,7 @@ if (!checkList) {
 
 if (!inputList) {
   inputList = [];
-  const info = document.createElement("toDo");
+  const info = document.createElement("p");
   info.classList.add("h2style");
   info.innerText = "Momentan nichts zu tun";
   topDiv.appendChild(info);
@@ -103,7 +103,8 @@ function createList(liste) {
       checkList.push(h2div.innerText);
       const jsoncheckList = JSON.stringify(checkList);
       localStorage.setItem("done", jsoncheckList);
-      bottomDiv.appendChild(h2div);
+      // bottomDiv.appendChild(h2div);
+      createListDone(checkList);
       div.innerHTML = "";
     });
 
@@ -136,14 +137,17 @@ function createListDone(checkList) {
   checkList.forEach((item, index) => {
     const div = document.createElement("div");
     div.classList.add("listItemButton");
+
     const h2div = document.createElement("div");
     h2div.classList.add("h2div");
+
     const h2 = document.createElement("h2");
     h2.classList.add("h2style");
     h2.innerText = item;
     h2.setAttribute("id", `element${index}`);
-    bottomDiv.appendChild(div);
-    div.appendChild(h2div);
+
     h2div.appendChild(h2);
+    div.appendChild(h2div);
+    bottomDiv.appendChild(div);
   });
 }

@@ -340,8 +340,6 @@ footer {
     font-size: 18px;
   }
 
-  
-
   .button1 {
     width: 20px;
     height: 20px;
@@ -366,24 +364,5 @@ footer {
 
 @media screen and (max-width: 480px) {
      
-  .containerHeader {
-    align-items: center;
-    height: 90px;
-  }
-
-  #logo {
-    height: 60%; 
-  }
-  
-  #title {
-    font-size: 20px;
-  }
-  
-   
-  .toDoTop {
-    width: 350px;
-    height: 250px;
-  }
-}
 
 /************* Media Queries Ende *************/

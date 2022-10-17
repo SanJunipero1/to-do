@@ -162,13 +162,13 @@ dialog button:hover {
   background-color: var(--color-primary);
 
 }
-
 .ueber {
   display: flex;
   align-items: center;
-  margin: auto;
   width: 320px;
   height: 100px;
+  margin-left: 100px;
+  margin:auto
 }
 
 h1 {
@@ -276,7 +276,10 @@ footer {
 /************* Media Queries Anfang *************/
 
 @media screen and (max-width: 780px) {
-     
+    
+  
+
+ 
   .containerHeader {
     width: 90%;
     height: 90px;
@@ -297,46 +300,67 @@ footer {
     gap: 5px;
   }
 
-  .toDoTop {
-    width: 600px;
-    height: 400px;
+  .ueber {
+    display: flex;
+    align-items: center;
+    width: 320px;
+    height: 100px;
+    margin-left: 100px;
+    margin:auto
   }
 
-  .listItem {
-    width: 335px;
-    height: 20px;
+  .toDoTop {
+    width: 480px;
+    height: 340px;
+  }
+
+  .h2div {
+    width: 374px;
+    height: 27px;
+
   }
 
   #open-dialog {
-    height: 25px;
-    width: 25px;
+      height: 34px;
+      width: 34px;
+      border-radius: 50%;
+      font-size: 27px;
+      border: 3px solid var(--color-light);
+
+    
+    
   }
 
-  /* .addTodo {
-    position: relative;
-    top: 290px;
-    left: 350px;
-  } */
+  .h2style {
+    margin-top: 0px;
+    font-family: var(--font-family);
+    font-weight: 100;
+    color: var(--color-light);
+    background-color: var(--color-primary);
+    font-size: 18px;
+  }
+
+  
 
   .button1 {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
   }
 
   .button2 {
-    width: 15px;
-    height: 15px;
-    margin: 5px 10px;
+    width: 27px;
+    height: 27px;
+   
   }
 
   .button3 {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
   }
 
   .listItemButton {
-    width: 345px;
-    height: 20px;
+    width: 469px;
+    height: 27px;
   }
 }
 

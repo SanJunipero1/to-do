@@ -56,6 +56,8 @@ header {
   width: 80%;
   height: 90px;
   display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 
 #logo {
@@ -70,6 +72,9 @@ header {
   align-content: center;
   padding: 10px;
   margin: 10px auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 nav > ul {
@@ -177,7 +182,7 @@ dialog button:hover {
 .ueber {
   display: flex;
   align-items: center;
-  width: 320px;
+  width: 250px;
   height: 100px;
   margin-left: 100px;
   margin: auto;

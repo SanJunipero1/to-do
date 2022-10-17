@@ -9,9 +9,9 @@ const inputSubmit = document.getElementById("inputform");
  * Toggle Modal
  */
 const addButton = document.querySelector("#open-dialog");
-const modal = document.querySelector(".addTodo dialog");
+const modal = document.querySelector("dialog");
 function toggleModal() {
-  modal.show();
+  modal.showModal();
 }
 addButton.addEventListener("click", toggleModal);
 

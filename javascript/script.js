@@ -105,12 +105,13 @@ function createList(liste) {
 
     //handle check
     checkButton.addEventListener("click", () => {
-      localStorage.removeItem("toDo", "newInput");
+      deleteItem(index)
       checkList.push(h2div.innerText);
       const jsoncheckList = JSON.stringify(checkList);
       localStorage.setItem("done", jsoncheckList);
       bottomDiv.appendChild(h2div);
       div.innerHTML = "";
+      
     });
 
     //handle edit

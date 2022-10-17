@@ -14,9 +14,19 @@
     />
   </head>
   <body>
+    <div class="modal-container">
+      <dialog>
+        <h2>Add Todo</h2>
+        <form method="dialog">
+          <input id="todoTitle" type="text" placeholder="What's to do?" />
+          <button id="submit" type="submit">Submit</button>
+          <button id="cancel">Cancel</button>
+        </form>
+      </dialog>
+    </div>
     <header>
       <div class="containerHeader">
-        <img  id="logo" src="./img/Logo_todo.png" alt="Logo" />
+        <img id="logo" src="./img/Logo_todo.png" alt="Logo" />
         <h1 id="title">To-Do-Lister</h1>
         <nav class="nav-menu">
           <ul>
@@ -33,14 +43,6 @@
         <section id="todoOpen">
           <div class="addTodo">
             <button id="open-dialog">+</button>
-            <dialog>
-              <h2>Add Todo</h2>
-              <form  id="inputform" method="dialog">
-                <input id="todoTitle" type="text" placeholder="What's to do?" />
-                <button id="submit" type="submit">Submit</button>
-                <button id="cancel">Cancel</button>
-              </form>
-            </dialog>
           </div>
         </section>
       </div>
@@ -59,16 +61,15 @@
           <p>Kontakt</p>
         </div>
         <ul id="linksFooter">
-            <li><a class=footerElement href="#">Impressum</a></li>
-            <li>|</li>
-            <li><a class=footerElement href="#">Datenschutz</a></li>
+          <li><a class="footerElement" href="#">Impressum</a></li>
+          <li>|</li>
+          <li><a class="footerElement" href="#">Datenschutz</a></li>
         </ul>
         <div id="copyright">
           <p>&copy; MyToDo 2022</p>
         </div>
       </div>
     </footer>
-
 
     <script src="./javascript/script.js"></script>
   </body>

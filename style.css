@@ -2,7 +2,7 @@
 
 :root {
   --color-primary: #05386b;
-  --color-secondary: darksalmon;
+  --color-secondary: rgb(62, 142, 189);
   --color-dark: #121212;
   --color-light: #f1f1f1;
   --font-family: "Roboto", sans-serif;
@@ -32,6 +32,7 @@ p {
 header {
   width: 100%;
   background-color: var(--color-secondary);
+  font-family: var(--font-family);
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -39,28 +40,31 @@ header {
 
 .containerHeader {
   width: 80%;
-  height: 86px;
+  height: 90px;
   display: flex;
-  border: 2px solid var(--color-dark);
-}
+ }
 
 #logo {
-  height: 100%;
+  height: 100%; 
 }
 
 #title {
   display: flex;
+  color: black; 
+  font-size: 40px;
   justify-content: center;
   align-content: center;
-  border: 2px solid var(--color-dark);
   padding: 10px;
   margin: 10px auto;
 }
 
 nav > ul {
   display: flex;
+  font-size: 20px; 
+  text-transform: uppercase;
   justify-content: flex-end;
-  gap: 30px;
+  gap: 35px;
+
 }
 
 /************* Header Ende *************/
@@ -151,9 +155,12 @@ dialog button:hover {
   border-radius: 50%;
   font-size: 40px;
   text-align: center;
+
+  cursor: pointer;
   color: var(--color-light);
   border: 4px solid var(--color-light);
   background-color: var(--color-primary);
+
 }
 
 .ueber {
@@ -230,6 +237,7 @@ h1 {
 footer {
   width: 100%;
   background-color: var(--color-secondary);
+  font-family: var(--font-family);
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -237,26 +245,29 @@ footer {
 .containerFooter {
   width: 80%;
   display: block;
-  border: 2px solid var(--color-dark);
 }
 
 #contactField {
   display: flex;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 10px;
   justify-content: center;
-  border: 2px solid var(--color-dark);
-}
+ }
 
 #linksFooter {
   display: flex;
+  margin: 10px;
+  gap: 20px;
   justify-content: center;
-}
-
-.footerElement {
-  padding: 10px auto;
 }
 
 #copyright {
   display: flex;
+  color: rgb(70, 68, 68);
+  font-size: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   justify-content: center;
 }
 
@@ -265,6 +276,27 @@ footer {
 /************* Media Queries Anfang *************/
 
 @media screen and (max-width: 780px) {
+     
+  .containerHeader {
+    width: 90%;
+    height: 90px;
+    align-items: center;
+  }
+  
+   #logo {
+    height: 70%; 
+  }
+  
+  #title {
+    font-size: 30px;
+  }
+  
+  nav > ul {
+    flex-direction: column;
+    font-size: 15px; 
+    gap: 5px;
+  }
+
   .toDoTop {
     width: 600px;
     height: 400px;
@@ -309,6 +341,21 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+     
+  .containerHeader {
+    align-items: center;
+    height: 90px;
+  }
+
+  #logo {
+    height: 60%; 
+  }
+  
+  #title {
+    font-size: 20px;
+  }
+  
+   
   .toDoTop {
     width: 350px;
     height: 250px;

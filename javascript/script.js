@@ -3,21 +3,15 @@ const bottomDiv = document.getElementById("bottomDiv");
 const inputField = document.getElementById("todoTitle");
 const listContainer = document.getElementById("listContainer");
 
-function setAttributes(element, attributes) {
-  Object.keys(attributes).forEach((attr) => {
-    element.setAttribute(attr, attributes[attr]);
-  });
-}
-
 const inputSubmit = document.getElementById("inputform");
 
 /**
  * Toggle Modal
  */
 const addButton = document.querySelector("#open-dialog");
-const modal = document.querySelector(".addTodo dialog");
+const modal = document.querySelector("dialog");
 function toggleModal() {
-  modal.show();
+  modal.showModal();
 }
 addButton.addEventListener("click", toggleModal);
 
@@ -105,13 +99,12 @@ function createList(liste) {
 
     //handle check
     checkButton.addEventListener("click", () => {
-      deleteItem(index)
+      deleteItem(index);
       checkList.push(h2div.innerText);
       const jsoncheckList = JSON.stringify(checkList);
       localStorage.setItem("done", jsoncheckList);
       bottomDiv.appendChild(h2div);
       div.innerHTML = "";
-      
     });
 
     //handle edit

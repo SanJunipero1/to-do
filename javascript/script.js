@@ -28,30 +28,20 @@ let inputList = JSON.parse(localStorage.getItem("toDo"));
 //check storage
 let checkList = JSON.parse(localStorage.getItem("done"));
 
-console.log(checkList)
-
-
-function checkDone(){
-const checkValue = localStorage.getItem("done")
-const h2check =  document.createElement("h2");
-h2check.classList.add("h2style")
-h2check = JSON.parse(checkValue)
-bottomDiv.appendChild(h2check);
+if (!checkList) {
+  checkList = [];
+} else {
+  createListDone(checkList);
 }
 
-
-
-
-
-if(!inputList){
-  inputList = []
+if (!inputList) {
+  inputList = [];
   const info = document.createElement("toDo");
-  info.classList.add("h2style")
-  info.innerText = "Momentan nichts zu tun"
-  topDiv.appendChild(info)
-}else{
-  createList(inputList)
-
+  info.classList.add("h2style");
+  info.innerText = "Momentan nichts zu tun";
+  topDiv.appendChild(info);
+} else {
+  createList(inputList);
 }
 
 /**
@@ -115,12 +105,12 @@ function createList(liste) {
 
     //handle check
     checkButton.addEventListener("click", () => {
-      checkList.push(h2div.innerText)
+      localStorage.removeItem("toDo", "newInput");
+      checkList.push(h2div.innerText);
       const jsoncheckList = JSON.stringify(checkList);
       localStorage.setItem("done", jsoncheckList);
       bottomDiv.appendChild(h2div);
       div.innerHTML = "";
-      localStorage.removeItem("toDo", "newInput");
     });
 
     //handle edit
@@ -135,12 +125,31 @@ function createList(liste) {
     });
   });
 }
+
 //handle delete + recreate ToDos and LocalStorage
 function deleteItem(index) {
   inputList.splice(index, 1);
   localStorage.removeItem("toDo", "newInput");
   createList(inputList);
   pushInput(inputList);
-
 }
 
+/**
+ * Create List of Done ToDos
+ */
+function createListDone(checkList) {
+  bottomDiv.innerHTML = "";
+  checkList.forEach((item, index) => {
+    const div = document.createElement("div");
+    div.classList.add("listItemButton");
+    const h2div = document.createElement("div");
+    h2div.classList.add("h2div");
+    const h2 = document.createElement("h2");
+    h2.classList.add("h2style");
+    h2.innerText = item;
+    h2.setAttribute("id", `element${index}`);
+    bottomDiv.appendChild(div);
+    div.appendChild(h2div);
+    h2div.appendChild(h2);
+  });
+}

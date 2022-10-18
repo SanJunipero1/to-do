@@ -103,7 +103,7 @@ function createList(liste) {
       checkList.push(h2div.innerText);
       const jsoncheckList = JSON.stringify(checkList);
       localStorage.setItem("done", jsoncheckList);
-      // bottomDiv.appendChild(h2div);
+      bottomDiv.appendChild(h2div);
       createListDone(checkList);
       div.innerHTML = "";
     });
@@ -140,14 +140,37 @@ function createListDone(checkList) {
 
     const h2div = document.createElement("div");
     h2div.classList.add("h2div");
-
+    const deleteButton = document.createElement("button");
+    deleteButton.classList.add("button1");
     const h2 = document.createElement("h2");
     h2.classList.add("h2style");
     h2.innerText = item;
     h2.setAttribute("id", `element${index}`);
-
+    
     h2div.appendChild(h2);
+    
     div.appendChild(h2div);
+    div.appendChild(deleteButton)
     bottomDiv.appendChild(div);
+
+    deleteButton.addEventListener("click", () => {
+      deleteItem1(index);
+    });
   });
+}
+
+
+
+//function fuer done delete
+function deleteItem1(index) {
+  checkList.splice(index, 1);
+  localStorage.removeItem("done", "newInput");
+  createListDone(checkList);
+  pushInput1(checkList);
+}
+
+//function fuer done delete
+function pushInput1(checkList) {
+  const jsoncheckList = JSON.stringify(checkList);
+  localStorage.setItem("done", jsoncheckList);
 }

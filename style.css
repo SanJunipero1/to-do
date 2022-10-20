@@ -72,9 +72,7 @@ header {
   align-content: center;
   padding: 10px;
   margin: 10px auto;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+ 
 }
 
 nav > ul {
@@ -182,18 +180,16 @@ dialog button:hover {
 .ueber {
   display: flex;
   align-items: center;
-  width: 250px;
-  height: 100px;
-  margin-left: 100px;
-  margin: auto;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 h1 {
-  text-align: center;
+   text-align: center;
   font-family: var(--font-family);
   font-weight: 700;
   color: var(--color-primary);
-  margin: 10px;
+ 
 }
 
 .h2div {
@@ -296,6 +292,16 @@ footer {
 
 /************* Media Queries Anfang *************/
 
+@media screen and (min-width: 820px) {
+  
+  #title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  }
+
+}
+
 @media screen and (max-width: 780px) {
   .containerHeader {
     width: 90%;
@@ -320,11 +326,8 @@ footer {
   .ueber {
     display: flex;
     align-items: center;
-    width: 320px;
-    height: 100px;
-    margin-left: 100px;
-    margin: auto;
-  }
+    justify-content: center;
+ }
 
   .toDoTop {
     width: 480px;
@@ -377,31 +380,32 @@ footer {
 @media screen and (max-width: 480px) {
   .containerHeader {
     align-items: center;
-    height: 90px;
+    height: 80px;
   }
 
   #logo {
-    height: 60%;
+    height: 50%;
   }
 
   #title {
     font-size: 20px;
-  }
+    }
 
   .ueber {
     display: flex;
     align-items: center;
-    width: 320px;
-    height: 100px;
-    margin-left: 100px;
-    margin: auto;
+    justify-content: center;
   }
 
   .toDoTop {
     width: 320px;
     min-height: 36px;
+    border: 2px solid var(--color-primary);
   }
 
+  h1{
+    font-size:20px;
+   } 
   .h2div {
     width: 246px;
     height: 18px;
@@ -425,18 +429,18 @@ footer {
   }
 
   .button1 {
-    width: 13px;
-    height: 13px;
+    width: 25px;
+    height: 25px;
   }
 
   .button2 {
-    width: 18px;
-    height: 18px;
+    width: 30px;
+    height: 30px;
   }
 
   .button3 {
-    width: 13px;
-    height: 13px;
+    width: 27px;
+    height: 27px;
   }
 
   .listItemButton {

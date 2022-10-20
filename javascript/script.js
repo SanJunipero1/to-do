@@ -52,7 +52,7 @@ const cancelButton = document.querySelector("#cancel");
 
 function submitToDo(inputList) {
   inputField.value = "";
-  inputList.push({ newInput });
+  inputList.push( newInput );
   pushInput(inputList);
   createList(inputList);
 }
@@ -82,7 +82,7 @@ function createList(liste) {
     h2div.classList.add("h2div");
     const h2 = document.createElement("h2");
     h2.classList.add("h2style");
-    h2.innerText = item.newInput;
+    h2.innerText = item;
     h2.setAttribute("id", `element${index}`);
     const checkButton = document.createElement("button");
     checkButton.classList.add("button2");
@@ -110,8 +110,11 @@ function createList(liste) {
 
     //handle edit
     editButton.addEventListener("click", () => {
-      let neuerText = prompt("Änderungen");
+      let neuerText = prompt("Änderung",h2.innerText);
       h2.innerText = neuerText;
+      inputList[index]=h2.innerText
+     jsontoDoList = JSON.stringify(inputList)
+     localStorage.setItem("toDo", jsontoDoList);
     });
 
     //handle delete
